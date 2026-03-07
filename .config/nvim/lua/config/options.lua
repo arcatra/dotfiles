@@ -4,7 +4,7 @@ vim.opt.modifiable = true
 vim.opt.autowrite = true
 vim.opt.cursorline = true
 vim.opt.autoread = true
-vim.opt.buftype=""
+--vim.opt.buftype
 
 -- line numbers
 vim.opt.number = true
