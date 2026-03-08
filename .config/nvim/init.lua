@@ -1,5 +1,3 @@
--- print("init lua file")
-
-require("config.keybinds")
-require("config.lazy")
-require("config.options")
+require("arcatra.config")
+require("arcatra.lazy")
+require("arcatra.lsp-keybinds")
