@@ -1,11 +1,11 @@
 local opt = vim.opt
 
--- editor
+-- Buffer config
 opt.showcmd = true
 opt.modifiable = true
 opt.autowrite = true
 opt.cursorline = true
---opt.buftype
+opt.autoread = true
 
 opt.wrap = false
 
@@ -22,9 +22,8 @@ opt.expandtab = true
 --tremGui
 opt.termguicolors = true
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
-opt.signcolumn = "yes" -- show sign column so that text doesn't shift
+opt.signcolumn = "yes"  -- show sign column so that text doesn't shift
 
-opt.autoread = true
 
 -- clipboard
 opt.clipboard:append("unnamedplus") -- use system clipboard as default register
@@ -35,4 +34,3 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
-
