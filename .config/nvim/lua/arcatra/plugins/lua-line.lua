@@ -5,7 +5,7 @@ return {
         require('lualine').setup {
             options = {
                 icons_enabled = true,
-                theme = 'gruvbox',
+                theme = 'iceberg_dark',
                 component_separators = { left = '', right = '' },
                 section_separators = { left = '', right = '' },
                 disabled_filetypes = {
@@ -20,7 +20,7 @@ return {
                     statusline = 1000,
                     tabline = 1000,
                     winbar = 1000,
-                    refresh_time = 16,     -- ~60fps
+                    refresh_time = 16, -- ~60fps
                     events = {
                         'WinEnter',
                         'BufEnter',

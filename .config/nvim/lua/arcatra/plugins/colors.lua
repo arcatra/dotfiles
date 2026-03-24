@@ -71,11 +71,11 @@ return {
                     enabled = true,
                     indentscope_color = "",
                 },
-                -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+                -- For more plugins integrations please scroll down (https://github.com/catppuccin-nvim/nvim#integrations)
             },
         })
         -- setup must be called before loading
-        vim.cmd.colorscheme "catppuccin"
+        vim.cmd.colorscheme "catppuccin-nvim"
     end
 
 }

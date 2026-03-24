@@ -8,7 +8,7 @@ return {
             "cssls",
             "html",
             "ts_ls",
-        }
+        },
     },
     dependencies = {
         {
@@ -18,11 +18,12 @@ return {
                     icons = {
                         package_installed = "✓",
                         package_pending = "➜",
-                        package_uninstalled = "✗"
-                    }
-                }
+                        package_uninstalled = "✗",
+                    },
+                },
             },
         },
         "neovim/nvim-lspconfig",
     },
+
 }
