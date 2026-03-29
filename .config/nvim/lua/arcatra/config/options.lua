@@ -7,6 +7,8 @@ opt.autowrite = true
 opt.cursorline = true
 opt.autoread = true
 
+opt.smartcase = true
+
 opt.wrap = false
 
 -- line numbers

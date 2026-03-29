@@ -25,7 +25,12 @@ $conda\
 $time\
 [ ](fg:lavender)\
 $cmd_duration\
-$line_break$character"""
+$line_break\
+$character"""
+
+# preview
+# 󰣭 serendrizzle …/dotfiles/.config/nvim   main ✘!   15:13
+# ❯
 
 palette = 'catppuccin_mocha'
 
@@ -64,7 +69,7 @@ format = '[ $user]($style)'
 [directory]
 style = "bg:peach fg:crust"
 format = "[ $path ]($style)"
-truncation_length = 0
+truncation_length = 3
 truncation_symbol = "…/"
 
 [directory.substitutions]
@@ -158,10 +163,10 @@ vimcmd_replace_symbol = '[❮](bold fg:lavender)'
 vimcmd_visual_symbol = '[❮](bold fg:yellow)'
 
 [cmd_duration]
+disabled = false
 show_milliseconds = true
 format = " in $duration "
 style = "bg:lavender"
-disabled = false
 show_notifications = true
 min_time_to_notify = 45000
 
