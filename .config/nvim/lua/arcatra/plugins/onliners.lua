@@ -10,4 +10,9 @@ return {
         end
 
     },
+
+    -- { --drex treesitter
+    --     'theblob42/drex.nvim',
+    --     dependencies = { 'nvim-tree/nvim-web-devicons' }
+    -- },
 }

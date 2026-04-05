@@ -28,10 +28,6 @@ $cmd_duration\
 $line_break\
 $character"""
 
-# preview
-# 󰣭 serendrizzle …/dotfiles/.config/nvim   main ✘!   15:13
-# ❯
-
 palette = 'catppuccin_mocha'
 
 [os]
@@ -163,10 +159,10 @@ vimcmd_replace_symbol = '[❮](bold fg:lavender)'
 vimcmd_visual_symbol = '[❮](bold fg:yellow)'
 
 [cmd_duration]
-disabled = false
 show_milliseconds = true
 format = " in $duration "
 style = "bg:lavender"
+disabled = false
 show_notifications = true
 min_time_to_notify = 45000
 

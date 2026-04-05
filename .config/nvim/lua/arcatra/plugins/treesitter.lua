@@ -13,6 +13,8 @@ return {
                 "javascript",
                 "lua",
                 "java",
+                "typescript",
+                "sql",
 
           },
           auto_install = false,

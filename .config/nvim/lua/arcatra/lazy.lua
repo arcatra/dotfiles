@@ -27,5 +27,6 @@ require("lazy").setup({
         enabled = true,
         notify = false,
     },
+    install = { colorscheme = { "catppuccin", "gruvbox" } },
     change_detection = { notify = false },
 })
