@@ -7,7 +7,7 @@ return {
             flavour = "macchiato", -- latte, frappe, macchiato, mocha
             background = {         -- :h background
                 light = "latte",
-                dark = "mocha",
+                dark = "macchiato",
             },
             transparent_background = false, -- disables setting the background color.
             float = {
@@ -76,6 +76,23 @@ return {
         })
         -- setup must be called before loading
         vim.cmd.colorscheme "catppuccin-nvim"
+        local groups = {
+            "Normal",
+            "NormalNC",
+            "NormalFloat",
+            "FloatBorder",
+            "TelescopeNormal",
+            "TelescopeBorder",
+            "LazyNormal",
+            "MasonNormal",
+            "Pmenu",
+        }
+
+        for _, group in ipairs(groups) do
+            -- #040A0F
+            -- #111324
+            vim.api.nvim_set_hl(0, group, { bg = "#111524" })
+        end
     end
 
 }

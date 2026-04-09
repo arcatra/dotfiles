@@ -1,4 +1,4 @@
--- local keymap = vim.keymapcolo
+-- local keymap = vim.keymapkey
 
 -- -- keybinds
 -- keymap.set("n", "<leader>h", ":nohlsearch<CR>", { desc = "Clear search" })
@@ -10,8 +10,8 @@
 -- keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 --
 
-local function map(m, k, v, d)
-    vim.keymap.set(m, k, v, { noremap = true, silent = true, desc = d })
+local function map(m, k, v)
+    vim.keymap.set(m, k, v, { noremap = true, silent = false, })
 end
 
 -- set leader
@@ -20,16 +20,17 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- universal
-map("n", "<leader>h", ":nohlsearch<CR>", "Clear search") -- Clear search
-map("n", "<leader>cd", vim.cmd.Ex)                       -- Open file explorer in nvim
+map("n", "<leader>h", ":nohlsearch<CR>") -- Clear search
+-- map("n", "<leader>cd", vim.cmd.Ex)       -- Open file explorer in nvim
+map("n", "<leader>cd", ":Ex<CR>")        -- Open file explorer in nvim
 
 -- Move to previous/next
 map('n', '<A-,>', '<Cmd>BufferPrevious<CR>')
 map('n', '<A-.>', '<Cmd>BufferNext<CR>')
 
 -- Re-order to previous/next
-map('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>')
-map('n', '<A->>', '<Cmd>BufferMoveNext<CR>')
+map('n', '<A-h>', '<Cmd>BufferMovePrevious<CR>')
+map('n', '<A-l>', '<Cmd>BufferMoveNext<CR>')
 
 -- buffers
 map("n", "<leader>q", ":BufferClose<CR>")

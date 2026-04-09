@@ -8,6 +8,7 @@ return {
             "cssls",
             "html",
             "ts_ls",
+            "clangd",
         },
     },
     dependencies = {
