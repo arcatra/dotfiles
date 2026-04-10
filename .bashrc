@@ -126,6 +126,7 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(starship init bash)"
 
 
+alias myenv="source ~/.local/lib/python/bin/activate"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

@@ -82,7 +82,6 @@ return {
             "NormalFloat",
             "FloatBorder",
             "TelescopeNormal",
-            "TelescopeBorder",
             "LazyNormal",
             "MasonNormal",
             "Pmenu",

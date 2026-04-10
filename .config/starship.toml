@@ -63,7 +63,7 @@ style_root = "fg:red"
 format = '[ $user]($style)'
 
 [directory]
-style = "fg:blue"
+style = "fg:pink"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
