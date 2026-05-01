@@ -4,12 +4,12 @@ format = """
 (red)\
 $os\
 $username\
-[ |](fg:red)\
+[ ](fg:red)\
 $directory\
-[|](fg:pink)\
+[](fg:pink)\
 $git_branch\
 $git_status\
-[|](fg:yellow)\
+[](fg:yellow)\
 $c\
 $rust\
 $golang\
@@ -19,7 +19,7 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[|](fg:green)\
+[](fg:green)\
 $conda\
 (fg:sapphire)\
 $time\
