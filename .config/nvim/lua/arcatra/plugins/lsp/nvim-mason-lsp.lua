@@ -10,6 +10,8 @@ return {
             "ts_ls",
             "clangd",
         },
+
+        automatic_enable = true,
     },
     dependencies = {
         {

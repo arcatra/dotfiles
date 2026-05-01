@@ -26,11 +26,11 @@ return {
                 diagnostics = {
                     [vim.diagnostic.severity.ERROR] = { enabled = true, icon = ' ' },
                 },
-                -- gitsigns = {
-                --     added = { enabled = true, icon = ' ' },
-                --     changed = { enabled = true, icon = ' ' },
-                --     deleted = { enabled = true, icon = ' ' },
-                -- },
+                gitsigns = {
+                    added = { enabled = true, icon = ' ' },
+                    changed = { enabled = true, icon = ' ' },
+                    deleted = { enabled = true, icon = ' ' },
+                },
                 separator = { left = '▎', right = '' },
 
                 -- If true, add an additional separator at the end of the buffer list

@@ -1,29 +1,27 @@
 return {
     'nvim-treesitter/nvim-treesitter',
-    tag = "v0.10.0",
+    version = '*',
     lazy = false,
     build = ':TSUpdate',
-    config = function ()
-        local configs = require("nvim-treesitter.configs")
+    opts = {
+        ensure_installed = {
+            -- primary languages
+            "python", "bash", "javascript", "java", "typescript", "sql", "lua",
 
-        configs.setup({
-            ensure_installed = {
-                "python",
-                "bash",
-                "javascript",
-                "lua",
-                "java",
-                "typescript",
-                "sql",
+            -- Neovim / Config / Docs
+            "vim", "vimdoc", "query", "markdown", "markdown_inline", "json", "yaml", "toml",
 
-          },
-          auto_install = false,
-          -- sync_install = false,
-          highlight = { enable = true },
-          indent = { enable = false },
-          autotag = { enable = true },
-
-      })
-  end
+            -- Utility
+            "regex", "comment", "diff", "dockerfile"
+        },
+        auto_install = true,
+        sync_install = false,
+        highlight = { enable = true },
+        indent = { enable = true },
+        autotag = { enable = true },
+    },
+    config = function(_, opts)
+        require('nvim-treesitter').setup(opts)
+    end
 
 }
