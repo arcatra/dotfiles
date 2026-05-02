@@ -31,7 +31,7 @@ return {
                     changed = { enabled = true, icon = ' ' },
                     deleted = { enabled = true, icon = ' ' },
                 },
-                separator = { left = '▎', right = '' },
+                separator = { left = ':▎', right = '' },
 
                 -- If true, add an additional separator at the end of the buffer list
                 separator_at_end = true,
@@ -51,9 +51,9 @@ return {
             },
             -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
             -- animation = true,
-            insert_at_start = false,
+            -- insert_at_start = true,
             -- …etc.
-            -- version = '^1.0.0', -- optional: only update when a new 1.x version is released
+            version = '^1.0.0', -- optional: only update when a new 1.x version is released
         },
     }
 }

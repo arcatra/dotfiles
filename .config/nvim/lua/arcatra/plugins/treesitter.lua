@@ -15,13 +15,13 @@ return {
             "regex", "comment", "diff", "dockerfile"
         },
         auto_install = true,
-        sync_install = false,
+        sync_install = true,
         highlight = { enable = true },
         indent = { enable = true },
         autotag = { enable = true },
     },
     config = function(_, opts)
-        require('nvim-treesitter').setup(opts)
+        require('nvim-treesitter.configs').setup(opts)
     end
 
 }

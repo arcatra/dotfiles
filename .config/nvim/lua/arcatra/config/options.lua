@@ -20,6 +20,7 @@ opt.tabstop = 4
 opt.shiftwidth = 4
 opt.shiftround = true
 opt.expandtab = true
+opt.smartindent = true
 
 --tremGui
 opt.termguicolors = true
