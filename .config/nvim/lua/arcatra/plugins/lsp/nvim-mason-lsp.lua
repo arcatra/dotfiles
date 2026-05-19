@@ -10,6 +10,8 @@ return {
             "ts_ls",
             "clangd",
             "vtsls",
+            "djls",
+            "djlsp",
         },
 
         automatic_enable = true,

@@ -26,12 +26,13 @@ return {
                 diagnostics = {
                     [vim.diagnostic.severity.ERROR] = { enabled = true, icon = ' ' },
                 },
-                gitsigns = {
-                    added = { enabled = true, icon = ' ' },
-                    changed = { enabled = true, icon = ' ' },
-                    deleted = { enabled = true, icon = ' ' },
-                },
-                separator = { left = ':▎', right = '' },
+                -- gitsigns = {
+                --     added = { enabled = true, icon = ' ' },
+                --     changed = { enabled = true, icon = ' ' },
+                --     deleted = { enabled = true, icon = ' ' },
+                -- },
+                separator = { left = '▎', right = '' },
+                -- ▎
 
                 -- If true, add an additional separator at the end of the buffer list
                 separator_at_end = true,
@@ -39,14 +40,14 @@ return {
                 -- Configure the icons on the bufferline when modified or pinned.
                 -- Supports all the base icon options.
                 modified = { button = '●' },
-                pinned = { button = '._.', filename = true },
+                pinned = { button = '..', filename = true },
                 -- 
 
                 -- Configure the icons on the bufferline based on the visibility of a buffer.
                 -- Supports all the base icon options, plus `modified` and `pinned`.
                 alternate = { filetype = { enabled = false } },
                 current = { buffer_index = true },
-                inactive = { button = '×' },
+                inactive = { button = ' ' },
                 visible = { modified = { buffer_number = false } },
             },
             -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:

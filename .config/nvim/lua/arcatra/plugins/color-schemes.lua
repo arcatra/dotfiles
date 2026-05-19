@@ -4,8 +4,8 @@ return {
     priority = 1000,
     config = function()
         require("catppuccin").setup({
-            flavour = "macchiato", -- latte, frappe, macchiato, mocha
-            background = {         -- :h background
+            flavour = "mocha", -- latte, frappe, macchiato, mocha
+            background = {     -- :h background
                 light = "latte",
                 dark = "macchiato",
             },
@@ -88,9 +88,10 @@ return {
         }
 
         for _, group in ipairs(groups) do
-            -- #040A0F
-            -- #111324
-            vim.api.nvim_set_hl(0, group, { bg = "#111524" })
+            --040A0F
+            --111324
+            --111524
+            vim.api.nvim_set_hl(0, group, { bg = "#0B0E14" })
         end
     end
 

@@ -1,0 +1,57 @@
+# The syntax is "key = value". The whitespace around the
+# equals doesn't matter.
+background = "#0B0E14"
+foreground = "#cad3f5"
+
+# Theme
+theme = "Catppuccin Frappe"
+
+# Cursor
+cursor-style = "block"
+
+# Fonts
+font-family = "FiraMono Nerd Font Propo"
+font-family-bold = "FiraMono Nerd Font Propo Bold"
+font-family-italic = "FiraMono Nerd Font Propo Italic"
+font-family-bold-italic = "FiraMono Nerd Font Propo Bold Italic"
+
+# Custom key-bindings
+keybind = ctrl+alt+o=toggle_tab_overview
+keybind = ctrl+alt+,=move_tab:-1
+keybind = ctrl+alt+.=move_tab:1
+
+keybind = alt+digit_1=unbind
+keybind = alt+digit_2=unbind
+keybind = alt+digit_3=unbind
+keybind = alt+digit_4=unbind
+keybind = alt+digit_5=unbind
+keybind = alt+digit_6=unbind
+keybind = alt+digit_7=unbind
+keybind = alt+digit_8=unbind
+keybind = alt+9=unbind
+keybind = alt+1=unbind
+keybind = alt+2=unbind
+keybind = alt+3=unbind
+keybind = alt+4=unbind
+keybind = alt+5=unbind
+keybind = alt+6=unbind
+keybind = alt+7=unbind
+keybind = alt+8=unbind
+
+keybind = ctrl+digit_1=goto_tab:1
+keybind = ctrl+digit_2=goto_tab:2
+keybind = ctrl+digit_3=goto_tab:3
+keybind = ctrl+digit_4=goto_tab:4
+keybind = ctrl+digit_5=goto_tab:5
+keybind = ctrl+digit_6=goto_tab:6
+keybind = ctrl+digit_7=goto_tab:7
+keybind = ctrl+digit_8=goto_tab:8
+keybind = ctrl+9=last_tab
+keybind = ctrl+1=goto_tab:1
+keybind = ctrl+2=goto_tab:2
+keybind = ctrl+3=goto_tab:3
+keybind = ctrl+4=goto_tab:4
+keybind = ctrl+5=goto_tab:5
+keybind = ctrl+6=goto_tab:6
+keybind = ctrl+7=goto_tab:7
+keybind = ctrl+8=goto_tab:8
