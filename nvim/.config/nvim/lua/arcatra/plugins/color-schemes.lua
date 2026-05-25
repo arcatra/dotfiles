@@ -28,8 +28,8 @@ return {
                 comments = { "italic" },    -- Change the style of comments
                 conditionals = { "italic" },
                 loops = {},
-                functions = {},
-                keywords = {},
+                functions = { "italic" },
+                keywords = { "italic" },
                 strings = {},
                 variables = {},
                 numbers = {},

@@ -124,7 +124,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 alias myenv="source ~/.local/lib/python/bin/activate"
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 eval "$(starship init bash)"
 

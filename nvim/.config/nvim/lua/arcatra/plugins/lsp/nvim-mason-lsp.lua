@@ -14,7 +14,7 @@ return {
             "djlsp",
         },
 
-        automatic_enable = true,
+        automatic_enable = false,
     },
     dependencies = {
         {

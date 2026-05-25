@@ -4,16 +4,15 @@ background = "#0B0E14"
 foreground = "#cad3f5"
 
 # Theme
-theme = "Catppuccin Frappe"
+theme = "Catppuccin Mocha"
 
 # Cursor
-cursor-style = "block"
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
 
-# Fonts
-font-family = "FiraMono Nerd Font Propo"
-font-family-bold = "FiraMono Nerd Font Propo Bold"
-font-family-italic = "FiraMono Nerd Font Propo Italic"
-font-family-bold-italic = "FiraMono Nerd Font Propo Bold Italic"
+#font-family
+font-family = "SauceCodePro Nerd Font"
 
 # Custom key-bindings
 keybind = ctrl+alt+o=toggle_tab_overview

@@ -23,6 +23,10 @@ require("lazy").setup({
         -- import your plugins
         { import = "arcatra.plugins" }, { import = "arcatra.plugins.lsp" }
     },
+    rocks = {
+        hererocks = false, -- Disable the automatic hererocks installer
+        enabled = true,    -- Keep LuaRocks support enabled
+    },
     checker = {
         enabled = true,
         notify = false,
