@@ -1,93 +1,81 @@
 local undodir = vim.fn.expand("~/.vim/undodir")
-if
-    vim.fn.isdirectory(undodir) == 0 -- create undodir if nonexistent
-then
+if vim.fn.isdirectory(undodir) == 0 then
     vim.fn.mkdir(undodir, "p")
 end
 
-vim.opt.iskeyword:append("-")           -- include - in words
-vim.opt.path:append("**")               -- include subdirs in search
-vim.opt.clipboard:append("unnamedplus") -- use system clipboard
+vim.opt.iskeyword:append("-")           
+vim.opt.path:append("**")               
+vim.opt.clipboard:append("unnamedplus") 
 
--- ============================================================================
--- OPTIONS
--- ============================================================================
 local options = {
     laststatus = 3,
-    ruler = false,      --disable extra numbering
-    showmode = false,   --not needed due to lualine
+    ruler = false,      
+    showmode = false,   
     showcmd = false,
-    wrap = true,        --toggle bound to leader W
-    cursorline = true,  --highlight line
-    scrolloff = 15,     -- keep 10 lines above/below cursor
-    sidescrolloff = 10, -- keep 10 lines to left/right of cursor
+    wrap = true,        
+    cursorline = true,  
+    scrolloff = 15,     
+    sidescrolloff = 10, 
 
-    ttyfast = true,     --faster scrolling
     smoothscroll = true,
-    title = true,       --automatic window titlebar
-    number = true,      --numbering lines
-    relativenumber = true, --toggle bound to leader nn
+    title = true,       
+    number = true,      
+    relativenumber = true, 
     numberwidth = 4,
 
-    signcolumn = "yes",                                                                                                                                        -- always show a sign column
-    showmatch = true,                                                                                                                                          -- highlights matching brackets
-    cmdheight = 1,                                                                                                                                             -- single line command line
-    pumheight = 10,                                                                                                                                            -- popup menu height
-    pumblend = 10,                                                                                                                                             -- popup menu transparency
-    winblend = 0,                                                                                                                                              -- floating window transparency
-    conceallevel = 2,                                                                                                                                          -- obsidian requirement
-    synmaxcol = 300,                                                                                                                                           -- syntax highlighting limit
-    fillchars = { eob = " " },                                                                                                                                 -- hide "~" on empty lines
+    signcolumn = "yes",                                                                                                                                        
+    showmatch = true,                                                                                                                                          
+    cmdheight = 1,                                                                                                                                             
+    pumheight = 10,                                                                                                                                            
+    pumblend = 10,                                                                                                                                             
+    winblend = 0,                                                                                                                                              
+    conceallevel = 2,                                                                                                                                          
+    synmaxcol = 300,                                                                                                                                           
+    fillchars = { eob = " " },                                                                                                                                 
 
-    hidden = true,                                                                                                                                             -- allow hidden buffers
-    errorbells = false,                                                                                                                                        -- no error sounds
-    backspace = "indent,eol,start",                                                                                                                            -- better backspace behaviour
-    autochdir = false,                                                                                                                                         -- do not autochange directories
-    selection = "inclusive",                                                                                                                                   -- include last char in selection
-    mouse = "a",                                                                                                                                               -- enable mouse support
-    modifiable = true,                                                                                                                                         -- allow buffer modifications
+    hidden = true,                                                                                                                                             
+    errorbells = false,                                                                                                                                        
+    backspace = "indent,eol,start",                                                                                                                            
+    autochdir = false,                                                                                                                                         
+    selection = "inclusive",                                                                                                                                   
+    mouse = "a",                                                                                                                                               
+    modifiable = true,                                                                                                                                         
 
-    guicursor =
-    "n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175",          -- cursor blinking and settings
+    guicursor = "n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175",          
 
-    -- Undo and backup, TIME
-    backup = false,   -- do not create a backup file
-    writebackup = false, -- do not write to a backup file
-    swapfile = false, -- do not create a swapfile
-    undofile = true,  -- do create an undo file
-    undodir = undodir, -- set the undo directory
-    updatetime = 300, -- faster completion
-    timeoutlen = 500, -- timeout duration
-    ttimeoutlen = 50, -- key code timeout
-    autoread = true,  -- auto-reload changes if outside of neovim
-    autowrite = false, -- do not auto-save
+    backup = false,   
+    writebackup = false, 
+    swapfile = false, 
+    undofile = true,  
+    undodir = undodir, 
+    updatetime = 300, 
+    timeoutlen = 500, 
+    ttimeoutlen = 50, 
+    autoread = true,  
+    autowrite = false, 
 
-    -- Tab and indent
-    tabstop = 4,     -- tabwidth
-    shiftwidth = 4,  -- indent width
-    softtabstop = 4, -- soft tab stop not tabs on tab/backspace
-    expandtab = true, -- use spaces instead of tabs
-    smartindent = true, -- smart auto-indent
-    ignorecase = true, -- case insensitive search
-    smartcase = true, -- case sensitive if uppercase in string
-    hlsearch = true, -- highlight search matches
-    incsearch = true, -- show matches as you type
+    tabstop = 4,     
+    shiftwidth = 4,  
+    softtabstop = 4, 
+    expandtab = true, 
+    smartindent = true, 
+    ignorecase = true, 
+    smartcase = true, 
+    hlsearch = true, 
+    incsearch = true, 
 
-    -- Folding
     foldmethod = "expr",
-    foldlevel = 99,                            --disable folding, lower #s enable
-    foldexpr = "v:lua.vim.treesitter.foldexpr()", -- use treesitter for folding
+    foldlevel = 99,                            
+    foldexpr = "v:lua.vim.treesitter.foldexpr()", 
 
     termguicolors = true,
-
     concealcursor = "nc",
+    splitkeep = "screen",        
 
-    splitkeep = "screen",        --stablizie window open/close
-
-    wildmenu = true,             -- tab completion
-    wildmode = "longest:full,full", -- complete longest common match, full completion list, cycle through with Tab
-    redrawtime = 10000,          -- increase neovim redraw tolerance
-    maxmempattern = 20000,       -- increase max memory
+    wildmenu = true,             
+    wildmode = "longest:full,full", 
+    redrawtime = 100, -- Safe value prevents editor interface freezing
+    maxmempattern = 20000,       
 }
 
 for k, v in pairs(options) do
