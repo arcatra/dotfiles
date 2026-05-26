@@ -9,12 +9,10 @@ return {
             "html",
             "ts_ls",
             "clangd",
-            "vtsls",
             "djls",
-            "djlsp",
         },
 
-        automatic_enable = false,
+        automatic_enable = true,
     },
     dependencies = {
         {
@@ -31,5 +29,4 @@ return {
         },
         "neovim/nvim-lspconfig",
     },
-
 }
