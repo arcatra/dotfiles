@@ -21,8 +21,7 @@ vim.g.maplocalleader = " "
 
 -- universal
 map("n", "<leader>h", ":nohlsearch<CR>") -- Clear search
--- map("n", "<leader>cd", vim.cmd.Ex)       -- Open file explorer in nvim
-map("n", "<leader>cd", ":Ex<CR>")        -- Open file explorer in nvim
+-- map("n", "<leader>cd", ":Ex<CR>")        -- Open file explorer in nvim
 
 -- Move to previous/next
 map('n', '<A-,>', '<Cmd>BufferPrevious<CR>')
@@ -31,6 +30,9 @@ map('n', '<A-.>', '<Cmd>BufferNext<CR>')
 -- Re-order to previous/next
 map('n', '<A-h>', '<Cmd>BufferMovePrevious<CR>')
 map('n', '<A-l>', '<Cmd>BufferMoveNext<CR>')
+
+-- Neo tree
+map("n", "<leader>cd", "<cmd>Neotree toggle filesystem left<cr>")
 
 -- buffers
 map("n", "<leader>q", ":BufferClose<CR>")

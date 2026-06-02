@@ -12,7 +12,7 @@ cursor-style-blink = false
 shell-integration-features = no-cursor
 
 #font-family
-font-family = "SauceCodePro Nerd Font"
+font-family = "JetBrains Mono"
 
 # Custom key-bindings
 keybind = ctrl+alt+o=toggle_tab_overview
