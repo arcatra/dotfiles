@@ -4,18 +4,26 @@ return {
     priority = 1000,
     config = function()
         require("catppuccin").setup({
-            flavour = "mocha", 
-            background = { light = "latte", dark = "macchiato" },
-            transparent_background = false, 
+            flavour = "mocha",
+            background = { light = "latte", dark = "mocha" },
+            transparent_background = false,
             float = { transparent = false, solid = false },
-            show_end_of_buffer = false,     
-            term_colors = false,            
+            show_end_of_buffer = false,
+            term_colors = false,
             dim_inactive = { enabled = false, shade = "dark", percentage = 0.15 },
-            styles = {                      
-                comments = { "italic" }, conditionals = { "italic" }, loops = {},
-                functions = { "italic" }, keywords = { "italic" }, strings = {},
-                variables = {}, numbers = {}, booleans = {}, properties = {},
-                types = {}, operators = {},
+            styles = {
+                comments = { "italic" },
+                conditionals = { "italic" },
+                loops = {},
+                functions = { "italic" },
+                keywords = { "italic" },
+                strings = {},
+                variables = {},
+                numbers = {},
+                booleans = {},
+                properties = {},
+                types = {},
+                operators = {},
             },
             custom_highlights = function(colors)
                 local bg_color = "#0B0E14"
@@ -31,7 +39,10 @@ return {
                 }
             end,
             integrations = {
-                cmp = true, gitsigns = true, nvimtree = true, notify = false,
+                cmp = true,
+                gitsigns = true,
+                nvimtree = true,
+                notify = false,
                 mini = { enabled = true, indentscope_color = "" },
             },
         })
