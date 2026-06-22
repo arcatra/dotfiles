@@ -4,7 +4,6 @@ return {
     cmd = { "ConformInfo" },
     keys = {
         {
-            -- Customize or remove this keymap to your liking
             "<leader>f",
             function()
                 require("conform").format({ async = true })
@@ -13,19 +12,23 @@ return {
             desc = "Format buffer",
         },
     },
-    -- This will provide type hinting with LuaLS
     ---@module "conform"
     ---@type conform.setupOpts
-
     opts = {
         -- Define your formatters
         formatters_by_ft = {
             lua = { "stylua" },
             python = { "isort", "black" },
+
+            -- Full-Stack Web Development Core & Frameworks
             javascript = { "prettierd", "prettier", stop_after_first = true },
             typescript = { "prettierd", "prettier", stop_after_first = true },
+            javascriptreact = { "prettierd", "prettier", stop_after_first = true }, -- React JS (.jsx)
+            typescriptreact = { "prettierd", "prettier", stop_after_first = true }, -- React TS (.tsx)
             html = { "prettier" },
             css = { "prettier" },
+            scss = { "prettier" }, -- SCSS stylesheets
+            json = { "prettier" }, -- Configuration files (package.json, etc.)
         },
         -- Set default options
         default_format_opts = {
@@ -41,7 +44,6 @@ return {
         },
     },
     init = function()
-        -- If you want the formatexpr, here is the place to set it
         vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
     end,
 }

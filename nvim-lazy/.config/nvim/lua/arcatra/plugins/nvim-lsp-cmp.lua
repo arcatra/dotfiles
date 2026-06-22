@@ -46,15 +46,14 @@ return {
             -- 3. Setup Mason-LSPConfig bridges (with modern inline handlers API)
             mason_lspconfig.setup({
                 ensure_installed = {
-                    "pyright",
-                    "ts_ls",
-                    "html",
-                    "cssls",
-                    "lua_ls",
-                    "jdtls",
-                    "clangd",
-                    "bashls",
-                    "sqlls",
+                    -- Core languages
+                    "pyright", "jdtls", "clangd", "bashls", "sqlls", "lua_ls",
+
+                    -- Web Dev Stack
+                    "ts_ls",       -- TypeScript / JavaScript / React (JSX/TSX)
+                    "html",        -- HTML
+                    "cssls",       -- CSS
+                    "tailwindcss", -- Tailwind CSS (highly recommended for modern React)
                 },
                 automatic_installation = true,
                 handlers = {
@@ -84,6 +83,39 @@ return {
                         })
                     end,
                 }
+            })
+
+            -- ============================================================================
+            -- REAL-TIME LSP DIAGNOSTICS HIGHLIGHTING CONFIGURATION
+            -- ============================================================================
+
+            -- Define diagnostic signs/icons in the gutter
+            local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+            for type, icon in pairs(signs) do
+                local hl = "DiagnosticSign" .. type
+                vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+            end
+
+            -- Configure global diagnostic presentation properties
+            vim.diagnostic.config({
+                -- Show virtual text inline right next to the code line where the issue exists
+                virtual_text = {
+                    spacing = 4,
+                    prefix = "●", -- Simple elegant dot indicator
+                },
+                -- Use undercurls/underlines on the code itself
+                underline = true,
+                -- Update diagnostics while typing in Insert mode (instead of waiting for save)
+                update_in_insert = true,
+                severity_sort = true,
+                float = {
+                    focused = false,
+                    style = "minimal",
+                    border = "rounded",
+                    source = "always",
+                    header = "",
+                    prefix = "",
+                },
             })
 
             -- 4. Unified Completion Menu Properties

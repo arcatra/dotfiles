@@ -11,8 +11,13 @@ cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
 
+# padding
+# window-padding-y = 2,0
+
 #font-family
 font-family = "JetBrains Mono"
+font-family-italic = "CommitMono Nerd Font"
+font-family-bold-italic = "CommitMono Nerd Font"
 
 # Custom key-bindings
 keybind = ctrl+alt+o=toggle_tab_overview

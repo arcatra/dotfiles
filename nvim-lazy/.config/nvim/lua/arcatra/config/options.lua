@@ -14,8 +14,8 @@ local options = {
     showcmd = false,
     wrap = true,
     cursorline = true,
-    scrolloff = 8,
-    sidescrolloff = 10,
+    scrolloff = 5,
+    sidescrolloff = 5,
 
     smoothscroll = true,
     title = true,

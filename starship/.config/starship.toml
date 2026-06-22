@@ -18,8 +18,6 @@ $haskell\
 $python\
 (fg:green)\
 $conda\
-(fg:sapphire)\
-$time\
 (fg:lavender)\
 $cmd_duration\
 $line_break\
