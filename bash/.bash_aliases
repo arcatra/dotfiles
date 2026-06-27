@@ -4,6 +4,10 @@ alias :q='exit'
 alias :Q='exit'
 alias quit='exit'
 
+# alias for cd
+alias cd..='cd ..'
+alias up='cd ..'
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
