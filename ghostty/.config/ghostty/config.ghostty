@@ -6,6 +6,11 @@ foreground = "#cad3f5"
 # Theme
 theme = "Catppuccin Mocha"
 
+# Shaders 
+custom-shader = ./shaders/cursor_warp.glsl
+# custom-shader = ./shaders
+
+# ...
 # Cursor
 cursor-style = block
 cursor-style-blink = false
