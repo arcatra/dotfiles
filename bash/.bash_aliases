@@ -18,4 +18,4 @@ alias cl='clear'
 alias clr='clear'
 
 # Python Env
-alias myenv="source ~/.local/lib/python/bin/activate"
+alias actpy="source ~/.local/lib/python/bin/activate"
