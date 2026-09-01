@@ -19,3 +19,4 @@ alias clr='clear'
 
 # Python Env
 alias actpy="source ~/.local/lib/python/bin/activate"
+alias deactpy=deactivate
