@@ -12,6 +12,7 @@ alias up='cd ..'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias ds='dearsize'
 
 # Alias for clear
 alias cl='clear'

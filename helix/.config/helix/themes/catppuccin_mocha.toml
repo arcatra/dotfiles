@@ -1,0 +1,6 @@
+inherits = "catppuccin_mocha"
+
+[palette]
+base = "#0B0E14"
+mantle = "#010101"
+crust = "#020202"
