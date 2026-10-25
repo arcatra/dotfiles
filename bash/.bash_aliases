@@ -4,6 +4,9 @@ alias :q='exit'
 alias :Q='exit'
 alias quit='exit'
 
+# Alias for Helix
+alias hx='helix'
+
 # alias for cd
 alias cd..='cd ..'
 alias up='cd ..'

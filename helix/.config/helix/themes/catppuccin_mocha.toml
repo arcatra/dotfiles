@@ -1,5 +1,8 @@
 inherits = "catppuccin_mocha"
 
+"ui.statusline.separator" = { fg = "blue" }
+# "ui.statusline.separator" = { fg = "#C8BAF8" }
+
 [palette]
 base = "#0B0E14"
 mantle = "#010101"
