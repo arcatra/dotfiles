@@ -22,10 +22,11 @@ render = true
 display-inlay-hints = true
 
 [editor.statusline]
-left = ["mode", "spinner", "spacer", "version-control", "spacer", "file-name", "file-modification-indicator"]
-center = ["file-absolute-path"]
-right = ["diagnostics", "separator", "selections", "separator", "position", "separator", "total-line-numbers","separator", "file-type"]
+left = ["mode", "spinner", "spacer", "version-control", "spacer", "file-absolute-path", "file-modification-indicator"]
+center = ["selections", "spacer", "total-line-numbers"]
+right = ["diagnostics", "spacer", "spacer", "position-percentage", "spacer", "separator", "position",  "separator", "file-type"]
 separator = ""
+# separator = "│"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
